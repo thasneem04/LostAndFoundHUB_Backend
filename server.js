@@ -8,7 +8,9 @@ const itemRoutes = require("./routes/itemRoutes");
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: process.env.URL
+}));
 app.use(express.json());
 
 // Routes
